@@ -1,0 +1,90 @@
+/* Batafsil sahifasi uchun qo'shimcha stillar (style.css bilan birga ulanadi) */
+
+/* index.html dagi "batafsil" tugmasi */
+.about-more { margin-bottom: var(--space-xl); }
+.btn-navy-lg { background: var(--primary); color: var(--on-primary); }
+.btn-navy-lg:hover { background: var(--primary-container); transform: translateY(-2px); }
+
+/* Sahifa sarlavhasi */
+.page-hero { background: var(--surface-low); padding: var(--space-xl) 0; border-bottom: 1px solid var(--border); }
+.breadcrumb { display: flex; align-items: center; gap: var(--space-xs); color: var(--on-surface-variant); margin-bottom: var(--space-md); }
+.breadcrumb a:hover { color: var(--primary); text-decoration: underline; }
+.breadcrumb b { color: var(--primary); font-weight: 600; }
+.page-hero .body-lg { max-width: 46rem; margin-top: var(--space-sm); }
+
+/* Missiya */
+.split { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); align-items: center; }
+@media (min-width: 1024px) { .split { grid-template-columns: repeat(2, 1fr); gap: var(--space-xl); } }
+.split-media { border-radius: var(--r-3xl); overflow: hidden; box-shadow: var(--shadow-xl); background: var(--surface-container); }
+.split-media img { width: 100%; height: 100%; min-height: 320px; max-height: 440px; object-fit: cover; }
+.split-text .body-lg + .body-lg { margin-top: var(--space-md); }
+.split-text .headline-lg { margin-bottom: var(--space-md); }
+.mission-list { margin-top: var(--space-lg); display: flex; flex-direction: column; gap: var(--space-md); }
+.mission-list li { display: flex; gap: var(--space-md); align-items: flex-start; }
+.mission-list .icon-box { width: 2.75rem; height: 2.75rem; margin: 0; }
+.mission-list h3 { font-size: 16px; line-height: 24px; font-weight: 700; color: var(--primary); }
+.mission-list p { color: var(--on-surface-variant); }
+
+/* Raqamlar */
+.numbers { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+@media (min-width: 1024px) { .numbers { grid-template-columns: repeat(4, 1fr); gap: var(--space-lg); } }
+.number { background: var(--primary); color: var(--on-primary); border-radius: var(--r-2xl); padding: var(--space-lg); }
+.number strong { display: block; font-size: 36px; line-height: 44px; font-weight: 800; letter-spacing: -0.015em; }
+.number span { color: var(--primary-fixed); font-size: 12px; font-weight: 600; letter-spacing: 0.02em; }
+.number.amber { background: var(--secondary); }
+.number.amber span { color: var(--secondary-fixed); }
+
+/* Qadriyatlar */
+.values { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+@media (min-width: 768px) { .values { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .values { grid-template-columns: repeat(4, 1fr); } }
+.value h3 { margin-bottom: var(--space-xs); }
+.value p { color: var(--on-surface-variant); }
+
+/* Metodika — haqiqiy ketma-ketlik */
+.timeline { position: relative; display: flex; flex-direction: column; gap: var(--space-lg); padding-left: 3.5rem; }
+.timeline::before { content: ""; position: absolute; left: 1.25rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--border); }
+.t-item { position: relative; }
+.t-dot { position: absolute; left: -3.5rem; top: 0; width: 2.5rem; height: 2.5rem; border-radius: 9999px; background: var(--primary); color: var(--on-primary); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px var(--surface-low); }
+.t-dot.amber { background: var(--secondary); }
+.t-item h3 { margin-bottom: var(--space-xs); }
+.t-item p { color: var(--on-surface-variant); max-width: 40rem; }
+.t-item .tag { display: inline-block; margin-top: var(--space-sm); }
+
+/* Jamoa */
+.team { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+@media (min-width: 768px) { .team { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .team { grid-template-columns: repeat(3, 1fr); } }
+.member { display: flex; flex-direction: column; gap: var(--space-md); }
+.member-top { display: flex; align-items: center; gap: var(--space-md); }
+.member-avatar { width: 3.5rem; height: 3.5rem; border-radius: 9999px; background: var(--primary-fixed); color: var(--primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.member p { color: var(--on-surface-variant); }
+.member .tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+
+/* Jihozlar */
+.facility { display: grid; grid-template-columns: 1fr; gap: var(--space-lg); }
+@media (min-width: 768px) { .facility { grid-template-columns: repeat(2, 1fr); } }
+.facility .card { display: flex; gap: var(--space-md); align-items: flex-start; }
+.facility .icon-box { margin: 0; flex-shrink: 0; }
+.facility p { color: var(--on-surface-variant); margin-top: 4px; }
+
+/* FAQ */
+.faq { max-width: 52rem; display: flex; flex-direction: column; gap: var(--space-sm); }
+.faq details { background: var(--surface-lowest); border: 1px solid var(--border); border-radius: var(--r-xl); box-shadow: var(--shadow-sm); }
+.faq summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: var(--space-md) var(--space-lg); font-size: 16px; font-weight: 600; color: var(--primary); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary .material-symbols-outlined { transition: transform .2s; color: var(--secondary); }
+.faq details[open] summary .material-symbols-outlined { transform: rotate(180deg); }
+.faq details[open] summary { padding-bottom: var(--space-sm); }
+.faq .answer { margin: 0 var(--space-md) var(--space-md); padding: var(--space-md); background: var(--surface-low); border-radius: var(--r-xl); color: var(--on-surface-variant); line-height: 1.625; }
+
+/* Yakuniy chaqiriq */
+.cta { background: var(--primary); color: var(--on-primary); border-radius: var(--r-3xl); padding: var(--space-xl) var(--space-lg); box-shadow: var(--shadow-xl); display: flex; flex-direction: column; gap: var(--space-lg); align-items: flex-start; position: relative; overflow: hidden; }
+.cta::before { content: ""; position: absolute; right: -3rem; bottom: -3rem; width: 22rem; height: 22rem; border-radius: 9999px; background: rgba(143,77,0,.35); filter: blur(64px); pointer-events: none; }
+.cta > * { position: relative; }
+.cta h2 { color: var(--on-primary); }
+.cta p { color: var(--surface-highest); max-width: 38rem; margin-top: var(--space-xs); }
+.cta-actions { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+.btn-ghost-light { background: transparent; color: var(--on-primary); border: 1.5px solid rgba(255,255,255,.5); }
+.btn-ghost-light:hover { background: rgba(255,255,255,.1); }
+@media (min-width: 1024px) { .cta { flex-direction: row; align-items: center; justify-content: space-between; padding: var(--space-xl); } }
